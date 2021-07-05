@@ -103,10 +103,11 @@ def play_game():
             break
     print(f'{final_string} in {turns} turns!\n')
 
-game_prompt()
-get_token_prompt()
-while True:
-    play_game()
-    if finish_playing_prompt():
-        break
-    clear_board()
+if __name__ == '__main__':
+    game_prompt()
+    get_token_prompt()
+    while True:
+        play_game()
+        if finish_playing_prompt():
+            break
+        clear_board()
