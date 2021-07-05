@@ -16,9 +16,6 @@ class Card():
     def __str__(self):
         return f'{self.rank} of {self.suit}'
 
-    def get_card(self):
-        return f'{self.rank} of {self.suit}'
-
 class Deck():
     '''Deck class holds standard 52 card deck'''
     def __init__(self):
@@ -84,7 +81,7 @@ class Player():
 def show_hand(cards):
     hand = 'Cards are '
     for card in cards:
-        hand += card.get_card() + '.'
+        hand += card.__str__() + '.'
     print(hand)
     print(f'Value of cards is {calculate_hand(cards)}')
 
