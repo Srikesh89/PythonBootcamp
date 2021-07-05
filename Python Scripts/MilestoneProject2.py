@@ -79,10 +79,7 @@ class Player():
         self.hand.clear()
 
 def show_hand(cards):
-    hand = 'Cards are '
-    for card in cards:
-        hand += card.__str__() + '.'
-    print(hand)
+    print('Cards are ', *cards, sep='.')
     print(f'Value of cards is {calculate_hand(cards)}')
 
 def calculate_hand(cards):
